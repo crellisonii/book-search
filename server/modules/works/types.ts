@@ -1,6 +1,6 @@
 import { Field, Int, ObjectType } from "type-graphql";
 
-import { Tuple } from "../tuples";
+import { Tuple } from "../tuple";
 import { Type_Value } from "../type_value";
 
 @ObjectType()
