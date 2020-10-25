@@ -1,6 +1,7 @@
 import "reflect-metadata";
 
 import { ApolloServer } from 'apollo-server-express';
+import { WorksResolver } from './modules/works/resolver';
 import { buildSchema } from 'type-graphql';
 import express from 'express';
 import { graphqlRouter } from "./routes";
@@ -11,7 +12,9 @@ const serverPort = port || 4000;
 async function bootstrap() {
 
   const schema = await buildSchema({
-    resolvers: []
+    resolvers: [
+      WorksResolver
+    ]
   });
 
   const server = new ApolloServer({
